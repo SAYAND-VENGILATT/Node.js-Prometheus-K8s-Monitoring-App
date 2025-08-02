@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-prometheus-app
+  labels:
+    app: node-prometheus-app
+spec:
+  selector:
+    app: node-prometheus-app
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
